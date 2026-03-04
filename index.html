@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Sydney Griser
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,17 +17,17 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+design a simple app to distinguish between cold versus allergy
  
 Known Issues:
-blah, blah, blah, blah
+none
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title>Hello World</title>  
+      <title>Cold or Allergy?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -42,15 +42,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+		    alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+            alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
         }
 
-  </script>
+ </script>
 
 
 
@@ -82,7 +83,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -96,19 +97,65 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+        <p>Do you have a fever?</p>  
+        <a href="#two" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>  
+        <a href="#two" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>  
+    	</div> 
 </div>
 
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p>Are your eyes itchy?</p>
+        <a href="#three" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+        <a href="#three" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>	
+
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+        <a href="#four" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+        <a href="#four" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+
+    <div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have body aches?</p>
+        <a href="#five" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+        <a href="#five" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+
+    <div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Content of page 5 goes here.</p>
+        <a href="#six" class="w3-btn w3-grey w3-round">Go to page six </a>
+	</div>
+
+    <div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Content of page 6 goes here.</p>
+        <a href="#seven" class="w3-btn w3-grey w3-round">Go to home page </a>
+	</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
