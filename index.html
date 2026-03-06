@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 design a simple app to distinguish between cold versus allergy
  
 Known Issues:
-none
+alerts don't work and results won't show up
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -43,13 +43,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		    alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
+            allergy_count = allergy_count +1;
+            alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
-            alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
+            alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);
         }
 
         function changeText(){
@@ -98,17 +98,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    <div id="content" class="w3-container">
         <p>Do you have a fever?</p>  
         <a href="#two" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>  
         <a href="#two" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>  
-    	</div> 
+    </div> 
 </div>
 
 <div class="page" id="two">
@@ -124,58 +125,63 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 
 <div class="page" id="three">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
+	 <div id="header" class="w3-container w3-flat-carrot">
+		 <h1>Question 3</h1>
+	 </div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-        <a href="#four" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
-        <a href="#four" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
-	</div>
+	 <div id="content" class="w3-container">
+		 <p>Do you have a sore throat?</p>
+         <a href="#four" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+         <a href="#four" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
+	 </div>
+</div>
 
-    <div class="page" id="four">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
-	</div>
+<div class="page" id="four">
+     <div id="header" class="w3-container w3-flat-carrot">
+         <h1>Question 4</h1>
+	 </div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have body aches?</p>
-        <a href="#five" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
-        <a href="#five" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
-	</div>
+	 <div id="content" class="w3-container">
+		 <p>Do you have body aches?</p>
+         <a href="#five" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+         <a href="#five" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> No </a>
+	 </div>
+</div>
 
-    <div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
-	</div>
+<div class="page" id="five">
+     <div id="header" class="w3-container w3-flat-carrot">
+		 <h1>Question 5</h1>
+     </div>
 	
-	<div id="content" class="w3-container">
-		<p>Are your eyes watering? </p>
-        <a href="#six" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
-        <a href="#six" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> No </a>
-	</div>
+	 <div id="content" class="w3-container">
+		 <p>Are your eyes watering? </p>
+         <a href="#six" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+         <a href="#six" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> No </a>
+	 </div>
+</div>
 
-    <div class="page" id="six">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
+<div class="page" id="six">
+	 <div id="header" class="w3-container w3-flat-carrot">
+		 <h1>Question 6</h1>
+	 </div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you feel really fatigued?</p>
-        <a href="#seven" oneclick="coldAdd()" class="w3-btn w3-grey w3-round">Yes </a>
-        <a href="#seven" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round">No </a>
-	</div>
+	 <div id="content" class="w3-container">
+		 <p>Do you feel really fatigued?</p>
+         <a href="#seven" oneclick="coldAdd()" class="w3-btn w3-grey w3-round">Yes </a>
+         <a href="#seven" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round">No </a>
+	 </div>
+</div>
 
-       <div class="page" id="seven">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-	</div>
+<div class="page" id="seven">
+	 <div id="header" class="w3-container w3-flat-carrot">
+		 <h1>Results</h1>
+	 </div>
 	
-	<div id="content" class="w3-container">
-		<p id="results">Press on the button below to see your results!</p>
-        <a oneclick="changeText()" class="w3-btn w3-grey w3-round"> Click here for results! </a>
-	</div>
+	 <div id="content" class="w3-container">
+		 <p id="results">Press on the button below to see your results!</p>
+         <a oneclick="changeText()" class="w3-btn w3-grey w3-round"> Click here for results! </a>
+	 </div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
