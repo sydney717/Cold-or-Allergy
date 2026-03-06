@@ -38,17 +38,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+        var allergy_percent = 0;
+        var cold_percent = 0;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		    alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
-
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
             alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count)
+        }
+
+        function changeText(){
+            var allergy_percent = allergy_count/(allergy_count + cold_count)*100;
+            var cold_percent = cold_count/(allergy_count + cold_count)*100;
+            var initialText = document.getElementById("results");
+            initialText.innerHTML = "Probability it is allergies = " + allergy_percent + "% <br> Probability it is a cold = " + cold_percent + "%"
         }
 
  </script>
@@ -143,8 +151,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 5 goes here.</p>
-        <a href="#six" class="w3-btn w3-grey w3-round">Go to page six </a>
+		<p>Are your eyes watering? </p>
+        <a href="#six" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round"> Yes </a>
+        <a href="#six" oneclick="coldAdd()" class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 
     <div class="page" id="six">
@@ -153,8 +162,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 6 goes here.</p>
-        <a href="#seven" class="w3-btn w3-grey w3-round">Go to home page </a>
+		<p>Do you feel really fatigued?</p>
+        <a href="#seven" oneclick="coldAdd()" class="w3-btn w3-grey w3-round">Yes </a>
+        <a href="#seven" oneclick="allergyAdd()" class="w3-btn w3-grey w3-round">No </a>
+	</div>
+
+       <div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results">Press on the button below to see your results!</p>
+        <a oneclick="changeText()" class="w3-btn w3-grey w3-round"> Click here for results! </a>
 	</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
